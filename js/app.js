@@ -71,9 +71,11 @@ function Game() {
             this.furry.y =  this.furry.y - 1;
         }
 
-
-        this.gameOver();
+        this.hideVisibleFurry();
         this.checkCoinCollision();
+        if (this.gameOver() === false) {
+            this.showFurry();
+        }
     };
 
     this.hideVisibleFurry = function() {
